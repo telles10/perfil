@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    position: relative;
+    overflow-x: hidden;
+}
+
+}
+
+section#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 64px 0 48px 0;
+    background: linear-gradient(120deg, #181c25 60%, #2563eb 100%);
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+    box-shadow: 0 8px 40px #2563eb33;
+    position: relative;
+    z-index: 1;
+}
+
+.foto img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 4px 32px #2563eb55;
+    background: #222;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Livro Portfólio - destaque visual */
+#portfolio-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 60px auto 40px auto;
+    z-index: 2;
+}
+
+.book-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 48px #0005, 0 1.5px 0 #2563eb;
+    display: flex;
+    align-items: center;
+    padding: 36px 32px;
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    min-height: 380px;
+    border: 2.5px solid #2563eb;
+    transition: box-shadow 0.3s;
+}
+
+.book-page {
+    width: 340px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    background: #f6f8fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #2563eb22;
+    padding: 24px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-section {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+.book-section.active {
+    display: flex;
+}
+
+.book-section h2 {
+    color: #2563eb;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.book-section ul, .book-section p {
+    color: #222;
+    font-size: 1.08rem;
+    margin: 0 0 0.5em 0;
+}
+
+.book-nav {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 18px;
+    box-shadow: 0 2px 8px #2563eb33;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book-nav:hover {
+    background: #60a5fa;
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .book-container {
+        max-width: 98vw;
+        padding: 12px 2vw;
+    }
+    .book-page {
+        width: 90vw;
+        min-width: 0;
+        padding: 12px 4vw;
+    }
+}
